@@ -1,0 +1,314 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+/* =======================
+   HEADER
+======================= */
+.header {
+  display: flex;                       /* Flex para alinhar logo e menu */
+  align-items: center;                 /* Centraliza verticalmente */
+  justify-content: space-between;      /* Logo à esquerda, menu à direita */
+  height: 150px;
+  padding: 0 5%;                       /* Espaçamento horizontal */
+  max-width: 1300px;
+  margin: auto;
+  background: rgba(118,117,118,1);
+}
+
+/* LOGO */
+.header-logo img {
+  width: 150px;                        /* Ajuste o tamanho como quiser */
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* MENU CONTAINER */
+.header-container {
+  display: flex;
+  justify-content: flex-end;           /* Menu à direita */
+  align-items: center;                 /* Centraliza verticalmente */
+}
+
+/* MENU ITENS */
+.nav-menu {
+  display: flex;
+  gap: 35px;                           /* Espaçamento entre links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: rgba(60,64,120);
+  border-top: 4px solid rgba(60,64,120);
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;            /* Logo em cima, menu abaixo */
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .header-container {
+    width: 100%;
+    justify-content: center;           /* Menu centralizado no mobile */
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+  }
+}
+body {
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =======================
+   HERO
+======================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 8%;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #305bdc;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin: 20px 0;
+  max-width: 500px;
+  color: #555;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+.grid-2 img{
+   width: 100%;
+  border-radius: 12px;
+}
+
+
+/* =======================
+   SECTIONS
+======================= */
+.section {
+  width: 100%;
+  padding: 70px 8%;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #305bdc;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =======================
+   GRID
+======================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* =======================
+   BUTTON
+======================= */
+.button {
+  display: inline-block;
+  background: #305bdc;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: #2448b3;
+  box-shadow: 0 0 12px rgba(48,91,220,0.7);
+  transform: translateY(-3px);
+}
+
+/* =======================
+   CARDS
+======================= */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(48,91,220,0.3);
+}
+
+/* BRILHO FUTURISTA */
+.card::after {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #305bdc, transparent);
+  top: 0;
+  left: -15%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::after {
+  opacity: 1;
+  transform: translateX(20px);
+}
+
+/* =======================
+   ANIMAÇÕES FUTURISTAS
+======================= */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  margin-top: 100px;
+    height: 360px;
+    background-image:linear-gradient(180deg, rgba(118, 117, 118), rgb(74, 74, 74)) ;
+    text-align: center;
+    border-top: 5px solid rgba(111, 159, 237);
+}
+.whats{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    color:white;
+}
+.whats:hover{
+    color: rgb(213,102,63);
+}
+.min{
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    margin-top:0;
+    padding: 2%;
+}
+.min2{
+    text-decoration: none;
+    color:white;
+    font-size: 20px ;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+.min2:hover{
+    color: rgba(59, 63, 118);
+}
+.min3{
+    margin-top: 4%;
+    background: rgb(44, 44, 44);
+}
+.down{
+    margin-left: 0.1%;
+}
+.down:hover{
+    color: rgba(59, 63, 118);
+}
+.hh1{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: rgba(59, 63, 118);
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
