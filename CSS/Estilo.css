@@ -5,6 +5,9 @@
   font-family: "Segoe UI", sans-serif;
   max-width: 100%;
 }
+.img{
+  width: 22%;
+}
 
 .nav_bar {
   display: flex; /* Flex para alinhar logo e menu */
@@ -97,7 +100,7 @@ footer {
   color: rgba(59, 63, 118);
 }
 .min3 {
-  margin-top: 5%;
+  margin-top: 4%;
   background: rgb(44, 44, 44);
 }
 .down {
