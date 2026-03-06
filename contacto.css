@@ -17,7 +17,7 @@
 
 /* LOGO */
 .header-logo img {
-  width: 150px;                        /* Ajuste o tamanho como quiser */
+  width: 24%;                        /* Ajuste o tamanho como quiser */
   height: auto;
   display: block;
   object-fit: contain;

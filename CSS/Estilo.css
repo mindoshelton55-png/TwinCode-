@@ -16,10 +16,9 @@
   background: rgba(118, 117, 118, 1);
 }
 .logo {
-  width: 28%; /* Ajuste o tamanho como quiser */
-  height: auto;
-  display: block;
-  object-fit: contain;
+  flex: 20%;
+  text-align: left;
+  margin-left: 0%;
 }
 
 .menu {
@@ -90,7 +89,7 @@ footer {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: 9px;
   font-style: normal;
 }
 .min2:hover {
@@ -113,7 +112,7 @@ footer {
   color: rgba(59, 63, 118);
 }
 .headline {
-  flex: 40%;
+  flex: 30%;
   margin-left: 10%;
   /*border: 1px solid black;*/
 }
@@ -124,10 +123,13 @@ footer {
   padding: 0;
   margin-top: 5%;
 }
+.png01{
+  width: 80%;
+}
 .png {
-  width: 10%;
+  width: 1%;
   margin-right: 10%;
-  flex: 40%;
+  flex: 70%;
   /*border:1px solid red;*/
   text-align: center;
 }
@@ -182,7 +184,7 @@ footer {
 
 .service {
   margin: 0;
-  height: 450px;
+  height: 490px;
   background: rgba(255, 255, 255, 0.1);
   padding: 0;
   border-radius: 5px;
@@ -631,27 +633,4 @@ footer {
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
-}
-
-@media (max-width: 968px) {
-  #iv-hero-title {
-    font-size: 48px;
-  }
-
-  #iv-services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #iv-nav-links {
-    display: none;
-  }
-
-  #iv-cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #iv-container {
-    padding: 0 20px;
-  }
 }

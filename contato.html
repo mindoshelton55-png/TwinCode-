@@ -1,29 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <title>TwinCode | Contacto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="contacto.css" />
+    <link rel="stylesheet" href="CSS/Estilo.css" />
+    <link rel="stylesheet" href="CSS/Responsiviadade.css" />
   </head>
   <body>
-    <header class="header">
-      <!-- Logo à esquerda -->
-      <div class="header-logo">
-        <img src="Logo_twinCode.png" alt="Logo" />
+    <nav class="nav_bar">
+      <div class="logo">
+        <img class="img" src="Logo_twinCode.png" style="width: 23%" alt="" />
       </div>
 
-      <!-- Menu à direita -->
-      <nav class="header-container">
-        <ul class="nav-menu">
-          <li><a href="pag1.html">Home</a></li>
-          <li><a href="sobre.html">Sobre Nós</a></li>
-          <li><a href="foryou.html">Para Si</a></li>
-          <li><a href="Sistemas.html">Sistemas</a></li>
-          <li><a href="contato.html">Contact us</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="foryou.html">Para Si</a>
+        <a href="Sistemas.html">Sistemas</a>
+        <a id="botao" href="contato.html">Contact us</a>
+      </div>
+    </nav>
 
     <section class="contact-section">
       <div class="contact-container">
@@ -70,12 +68,42 @@
       </div>
     </section>
 
-    <script src="contacto.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+        if (!form) return alert("Formulário não encontrado!");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // evita reload
+
+          const formData = new FormData(form);
+
+          // ALTERA AQUI o caminho do PHP conforme a tua pasta
+          fetch("/meu_site/Global_Estudo/Back_end/send.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.success) {
+                alert("Mensagem enviada com sucesso!");
+                form.reset();
+              } else {
+                alert("Erro: " + data.error);
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+              alert("Erro ao enviar a mensagem");
+            });
+        });
+      });
+    </script>
     <footer>
       <h1 class="hh1">Twin Code</h1>
       <div class="min">
         <a class="min2" href="Login.html">Login</a>
-        <a class="min2" href="pag1.html">Home</a>
+        <a class="min2" href="index.html">Home</a>
         <a class="min2" href="sobre.html">About US</a>
         <a class="min2" href="contato.html">Contact Us</a>
         <a class="min2" href="foryou.html">For You</a>

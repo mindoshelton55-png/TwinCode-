@@ -23,7 +23,8 @@
 
 /* ===== HERO SECTION ===== */
 .sistemas-hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(44, 90, 160, 0.9) 0%,
       rgba(30, 58, 111, 0.95) 100%
@@ -110,20 +111,12 @@
 }
 
 /* ===== SYSTEMS GRID ===== */
-.sistemas-grid {
+.sistema-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 80px;
-}
-
-.sistema-card {
-  background-color: white;
-  border-radius: var(--sistemas-border-radius);
-  overflow: hidden;
-  box-shadow: var(--sistemas-box-shadow);
-  transition: var(--sistemas-transition);
-  border: 1px solid var(--sistemas-light-gray);
+  align-items: center;
+  padding: 80px 8%;
 }
 
 .sistema-card:hover {
@@ -202,6 +195,27 @@
 .sistema-nota p {
   margin: 0;
   color: var(--sistemas-dark);
+}
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+.hero-image p {
+  margin-top: 15px;
+  color: var(--sistemas-gray);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .sistema-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1; /* imagem sobe no mobile */
+  }
 }
 
 /* ===== SYSTEM DETAILS ===== */
@@ -401,43 +415,4 @@
     padding: 12px 25px;
     font-size: 1rem;
   }
-}
-footer {
-  margin-top: 100px;
-    height: 360px;
-    background-image:linear-gradient(180deg, rgba(118, 117, 118), rgb(74, 74, 74)) ;
-    text-align: center;
-    border-top: 5px solid rgba(111, 159, 237);
-}
-
-    .min{
-    display: flex;
-    flex-flow: column;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    margin-top: 0;
-    padding: 2%;
-}
-.min2{
-    text-decoration: none;
-    color:white;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    margin-bottom: 1%;
-}
-.min2:hover{
-    color: rgba(59, 63, 118);
-}
-.min3{
-    margin-top: 4%;
-    background: rgb(44, 44, 44);
-}
-.down{
-    margin-left: 0.1%;
-}
-.down:hover{
-    color: rgba(59, 63, 118);
 }
